@@ -195,6 +195,9 @@ body {
 
 .cta-container {
     margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .cta-button {
@@ -214,6 +217,25 @@ body {
 .cta-button:hover {
     background: var(--c-text-1);
     color: var(--c-bg-1);
+}
+
+.cta-button-solid {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 1px solid var(--c-text-1);
+    background: var(--c-text-1);
+    color: var(--c-bg-1);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cta-button-solid:hover {
+    background: transparent;
+    color: var(--c-text-1);
 }
 
 /* --- Scene 2: Project Support --- */
