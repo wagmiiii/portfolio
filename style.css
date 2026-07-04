@@ -1,0 +1,67 @@
+/* --- Base Variables & Reset --- */
+:root {
+    --font-primary: 'Inter', sans-serif;
+    
+    /* Dark Theme (Default) */
+    --c-bg-1: #050505;
+    --c-bg-2: #ffffff;
+    --c-bg-3: #0a0a0a;
+    
+    --c-text-1: #ffffff;
+    --c-text-2: #050505;
+    --c-text-1-muted: #a0a0a0;
+    --c-text-2-muted: #666666;
+
+    --c-border-1: rgba(255, 255, 255, 0.1);
+    --c-border-2: rgba(0, 0, 0, 0.1);
+
+    --c-card-bg-1: rgba(255, 255, 255, 0.03);
+    --c-card-bg-2: #fbfbfb;
+    --c-card-hover-1: rgba(255, 255, 255, 0.05);
+    --c-card-hover-2: #ffffff;
+
+    --c-nav-bg: rgba(5, 5, 5, 0.8);
+    --c-overlay: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%);
+    --c-blend-mode: multiply;
+}
+
+[data-theme="light"] {
+    --c-bg-1: #ffffff;
+    --c-bg-2: #050505;
+    --c-bg-3: #f5f5f5;
+    
+    --c-text-1: #050505;
+    --c-text-2: #ffffff;
+    --c-text-1-muted: #666666;
+    --c-text-2-muted: #a0a0a0;
+
+    --c-border-1: rgba(0, 0, 0, 0.1);
+    --c-border-2: rgba(255, 255, 255, 0.1);
+
+    --c-card-bg-1: #ffffff;
+    --c-card-bg-2: #111111;
+    --c-card-hover-1: #f0f0f0;
+    --c-card-hover-2: #1a1a1a;
+
+    --c-nav-bg: rgba(255, 255, 255, 0.8);
+    --c-overlay: linear-gradient(to right, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.4) 100%);
+    --c-blend-mode: screen; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--c-bg-1);
+    color: var(--c-text-1);
+    overflow-x: hidden;
+}
+
