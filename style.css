@@ -793,6 +793,14 @@ body {
         align-items: center;
     }
 
+    .main-title {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+    }
+
+    .subtitle {
+        font-size: clamp(1.2rem, 5vw, 1.5rem);
+    }
+
     /* Scene 2 */
     .scene-two {
         padding: 25% 5% 35% 5%;
@@ -869,6 +877,12 @@ body {
         flex: 0 0 85%;
         scroll-snap-align: center;
         padding: 2.5rem 1.5rem;
+    }
+
+    /* Footer Typography Override */
+    .footer-massive-text {
+        font-size: 15vw;
+        letter-spacing: 2px;
     }
 
     /* Scene 4 Contact Mobile */
