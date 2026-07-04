@@ -120,3 +120,83 @@ body {
     color: var(--c-text-1);
 }
 
+.theme-btn {
+    background: transparent;
+    border: none;
+    color: var(--c-text-1-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.theme-btn:hover {
+    color: var(--c-text-1);
+}
+
+/* --- Scene 1: Hero Section --- */
+.scene-one {
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 10%;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--c-overlay);
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 800px;
+    z-index: 10;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.main-title {
+    font-size: clamp(4rem, 8vw, 8rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 300;
+    margin-bottom: 2rem;
+    color: var(--c-text-1);
+}
+
+.description {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--c-text-1-muted);
+    margin-bottom: 3rem;
+}
+
+.cta-container {
+    margin-top: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
