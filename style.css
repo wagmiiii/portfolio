@@ -62,7 +62,6 @@ body {
     font-family: var(--font-primary);
     background-color: var(--c-bg-1);
     color: var(--c-text-1);
-    overflow-x: hidden;
 }
 
 /* --- Layout & Scenes --- */

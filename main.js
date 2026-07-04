@@ -28,6 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const hiddenElements = document.querySelectorAll('.fade-in');
     hiddenElements.forEach((el) => observer.observe(el));
 
+    // Bulletproof Fail-safe: Force visible after 2.5s if observer fails
+    setTimeout(() => {
+        hiddenElements.forEach(el => el.classList.add('visible'));
+    }, 2500);
+
     
     // Theme logic
     const themeToggle = document.getElementById('theme-toggle');
