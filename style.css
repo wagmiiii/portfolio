@@ -200,3 +200,209 @@ body {
 .cta-button {
     display: inline-block;
     padding: 1rem 2rem;
+    border: 1px solid var(--c-text-1);
+    background: transparent;
+    color: var(--c-text-1);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background: var(--c-text-1);
+    color: var(--c-bg-1);
+}
+
+/* --- Scene 2: Project Support --- */
+.scene-two {
+    background-color: var(--c-bg-2);
+    color: var(--c-text-2);
+    justify-content: space-between;
+    padding: 10% 5% 5% 5%;
+    overflow: hidden;
+}
+
+.video-mask-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+    mix-blend-mode: var(--c-blend-mode); /* Blends the dark video into the white background */
+    opacity: 0.9; 
+}
+
+.bg-video-masked {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mask-image: linear-gradient(to left, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+}
+
+.scene-two-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70%;
+    pointer-events: none; /* Let clicks pass to video if needed, but we don't */
+}
+
+.scene-two-content > * {
+    pointer-events: auto;
+}
+
+.project-header span {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--c-text-2-muted);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.project-header h2 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.tag {
+    font-size: 0.7rem;
+    font-weight: 900;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid var(--c-border-2);
+    border-radius: 20px;
+    margin-left: 1rem;
+    vertical-align: middle;
+}
+
+.project-details {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-dark {
+    background-color: var(--c-text-2);
+    color: var(--c-text-1);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    border: 1px solid var(--c-text-2);
+    transition: all 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: transparent;
+    color: var(--c-text-2);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--c-text-2);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    border: 1px solid var(--c-text-2);
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: var(--c-text-2);
+    color: var(--c-text-1);
+}
+
+.social-proof {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatars {
+    display: flex;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: 2px solid #fff;
+    margin-left: -10px;
+}
+.avatar:first-child { margin-left: 0; background-color: var(--c-text-2-muted); }
+.avatar:nth-child(2) { background-color: #888; }
+.avatar:nth-child(3) { background-color: #333; }
+
+.proof-text {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.project-stats {
+    max-width: 400px;
+    margin-left: 50%; /* Push to right slightly */
+    text-align: right;
+    margin-top: -8rem;
+}
+
+.stat-number {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+.stat-desc {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--c-text-2-muted);
+    margin-bottom: 1rem;
+}
+
+.stat-text {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.scene-two-footer {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--c-border-2);
+    padding-top: 2rem;
+}
+
+.footer-col {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.footer-col h4 {
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.footer-col p {
+    font-size: 0.75rem;
