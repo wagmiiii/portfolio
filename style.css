@@ -406,3 +406,83 @@ body {
 
 .footer-col p {
     font-size: 0.75rem;
+    line-height: 1.5;
+    color: var(--c-text-2-muted);
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Scene 3: About --- */
+.scene-three {
+    background-color: var(--c-bg-3);
+    color: var(--c-text-1);
+    justify-content: center;
+    padding: 10% 5%;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.light-text {
+    color: var(--c-text-1);
+    margin-bottom: 4rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.about-card {
+    background: var(--c-card-bg-1);
+    border: 1px solid var(--c-border-1);
+    padding: 3rem 2rem;
+    border-radius: 4px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    background: var(--c-card-hover-1);
+}
+
+.about-card h3 {
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--c-text-1-muted);
+    margin-bottom: 1.5rem;
+}
+
+.about-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.about-card .date {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--c-text-1-muted);
+    margin-top: 1rem;
+}
+
+.mt-1 {
+    margin-top: 1.5rem;
+}
+
+/* Scroll Animation Utility Classes */
