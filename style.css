@@ -205,6 +205,13 @@ body {
     backdrop-filter: blur(10px);
     margin-bottom: 2rem;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.availability-tag:hover {
+    transform: translateY(-2px);
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .pulse-dot {
