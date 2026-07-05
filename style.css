@@ -64,16 +64,6 @@ body {
     color: var(--c-text-1);
 }
 
-
-/* --- Lowercase Artistic Typography --- */
-.logo,
-.nav-links a,
-.huge-title,
-.about-title,
-.contact-intro {
-    text-transform: lowercase;
-}
-
 /* --- Layout & Scenes --- */
 .scene {
     min-height: 100vh;
@@ -184,7 +174,7 @@ body {
     line-height: 1;
     letter-spacing: -2px;
     margin-bottom: 1rem;
-    text-transform: lowercase;
+    text-transform: uppercase;
 }
 
 .subtitle {
@@ -551,7 +541,7 @@ body {
     margin-bottom: 3rem;
     border-bottom: 1px solid var(--c-border-2);
     padding-bottom: 1rem;
-    text-transform: lowercase;
+    text-transform: uppercase;
     color: var(--c-text-2-muted);
 }
 
@@ -709,7 +699,7 @@ body {
     color: var(--c-text-1);
     text-align: center;
     margin-bottom: 3rem;
-    text-transform: lowercase;
+    text-transform: uppercase;
     user-select: none;
     white-space: nowrap;
     width: 100%;
