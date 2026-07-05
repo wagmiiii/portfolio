@@ -1,4 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Mobile navigation toggle (HIGHEST PRIORITY)
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const navLinksItems = document.querySelectorAll('.nav-links a');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        navLinksItems.forEach(item => {
+            item.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    }
+
     // Navbar scroll effect
     const navbar = document.querySelector('.navbar');
 
@@ -51,23 +71,5 @@ document.addEventListener('DOMContentLoaded', () => {
         console.warn('Theme preference could not be loaded due to browser security settings.');
     }
 
-    // Mobile navigation toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const navLinksItems = document.querySelectorAll('.nav-links a');
 
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-
-        // Close menu when clicking a link
-        navLinksItems.forEach(item => {
-            item.addEventListener('click', () => {
-                menuToggle.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
-    }
 });
