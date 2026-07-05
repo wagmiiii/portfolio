@@ -1,5 +1,10 @@
 # Ademola Ajala | Personal Portfolio
 
+<div align="center">
+  <a href="./README.md"><b>📖 Project Overview</b></a> &nbsp; | &nbsp; <a href="./project_log.md"><b>🏗️ Engineering Design Log</b></a>
+</div>
+<br>
+
 Welcome to the repository for my personal portfolio! This project is a highly dynamic, cinematic, and fully responsive website designed to showcase my work as an AI Native Software Engineer. 
 
 You can view the live site here: [wagmiiii.github.io/portfolio](https://wagmiiii.github.io/portfolio)
