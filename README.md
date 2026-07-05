@@ -37,7 +37,7 @@ GitHub Actions will automatically build and deploy your site within 60 seconds!
 ## 👤 Author
 
 <a href="https://github.com/wagmiiii">
-  <img src="https://github.com/wagmiiii.png" width="120" height="120" style="border-radius: 50%;" alt="Ademola Ajala GitHub Profile Picture">
+  <img src="https://github.com/wagmiiii.png" width="120" height="120" alt="Ademola Ajala GitHub Profile Picture">
 </a>
 
 **Ademola Ajala**
