@@ -14,7 +14,7 @@ This portfolio was architected entirely from scratch using native web technologi
 
 ## 🎨 Features
 
-*   **Cinematic Video Backgrounds:** High-resolution MP4 backgrounds with advanced CSS masking and blend modes.
+*   **Cinematic Video Backgrounds:** High-resolution MP4 backgrounds generated natively using **Google's Gemini AI**, styled with advanced CSS masking and blend modes.
 *   **True Dark/Light Mode:** Instantaneous theme toggling driven entirely by CSS root variables.
 *   **Responsive Brutalism Typography:** Massive typographic elements that dynamically scale down to fit even the smallest mobile screens without overflowing.
 *   **Bulletproof Fail-safes:** Advanced JavaScript error handling ensures that strict browser privacy modes (which block cookies or `localStorage`) will never crash the site's critical functionality (like the mobile burger menu).
