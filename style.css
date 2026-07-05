@@ -212,6 +212,7 @@ body {
 .availability-tag:hover {
     transform: translateY(-2px);
     background: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
 }
 
 .pulse-dot {
