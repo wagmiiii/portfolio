@@ -89,6 +89,38 @@ This document tracks our progress in building your portfolio website. It will be
     *   Updated IntelliDesk CTA buttons to point to active anchors (`#contact` and `#about`).
 *   **Status:** ✅ Complete.
 
-## 11. Project Summary
-*   The website is fully functional, responsive, and matches all resume details and reference assets.
+## 12. Deployment Bug Fixes & Animation Polish
+*   **Goal:** Resolve missing animations and broken interactive elements on the live site.
+*   **Actions Taken:**
+    *   Diagnosed and restored a critically truncated `<script src="main.js"></script>` tag.
+    *   Re-injected `.fade-in` CSS keyframes and `IntersectionObserver` logic in `main.js`.
+    *   Built a robust 2.5s fallback timeout to force content visibility if animations fail or observers are blocked.
+*   **Status:** ✅ Complete.
 
+## 13. System Resilience & Theme Engineering
+*   **Goal:** Implement a flawless Light/Dark mode toggle while handling aggressive browser privacy blocks.
+*   **Actions Taken:**
+    *   Engineered a global CSS variable system (`--c-bg-1`, `--c-text-1`, etc.) to drive seamless theme switching.
+    *   Decoupled `localStorage` checks in `main.js` with `try/catch` fail-safes so that if a user's browser blocks cookies/storage, the core site functionality (like the mobile burger menu) never crashes.
+*   **Status:** ✅ Complete.
+
+## 14. Micro-Interactions & Asset Optimization
+*   **Goal:** Enhance the premium feel of the portfolio through personalized assets and strategic UX/UI.
+*   **Actions Taken:**
+    *   Synced the live GitHub avatar URL to the site so it automatically updates the favicon and the main Navbar.
+    *   Injected the dynamic avatar into the GitHub and LinkedIn contact cards.
+    *   Built a highly visible, glowing neon "AVAILABLE FOR ROLES & FREELANCE" status badge in the Hero section.
+    *   Configured the badge as a functional anchor link routing directly to the Contact section, complete with a sleek hover interaction.
+*   **Status:** ✅ Complete.
+
+## 15. Mobile Optimization & SEO
+*   **Goal:** Perfect the viewing experience on tiny screens and update search engine metadata.
+*   **Actions Taken:**
+    *   Refined the Hero layout on mobile by hiding redundant paragraphs and scaling down the availability badge to reduce cognitive load.
+    *   Removed text-decoration on mobile touch states to prevent sticky underlines.
+    *   Updated the SEO meta description to proudly reflect Ademola's graduate status as an AI Native Software Engineer.
+    *   Implemented CSS Cache Busting (`style.css?v=2.0`) to force mobile browsers to immediately pull the newest layout.
+*   **Status:** ✅ Complete.
+
+## 16. Project Summary
+*   The website is fully functional, highly optimized, totally resilient to aggressive privacy blockers, and serves as a world-class architectural portfolio.
