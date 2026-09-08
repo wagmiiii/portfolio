@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // ----------------------------------------------------
     // 5. Motion: Scroll Animations (Replacing IntersectionObserver)
     // ----------------------------------------------------
-    inView(".fade-in", (info) => {
-        animate(info.target, { opacity: [0, 1], y: [30, 0] }, { duration: 0.8, ease: [0.16, 1, 0.3, 1] });
+    inView(".fade-in", (el) => {
+        animate(el, { opacity: [0, 1], y: [30, 0] }, { duration: 0.8, ease: [0.16, 1, 0.3, 1] });
     });
 
     const grids = document.querySelectorAll('.other-projects-grid');
