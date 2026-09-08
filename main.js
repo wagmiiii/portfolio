@@ -1,4 +1,4 @@
-import { animate, inView, scroll, stagger, spring } from "https://cdn.jsdelivr.net/npm/motion@latest/+esm";
+import { animate, inView, scroll, stagger } from "https://cdn.jsdelivr.net/npm/motion@latest/+esm";
 
 document.addEventListener('DOMContentLoaded', () => {
     // ----------------------------------------------------
