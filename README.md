@@ -49,7 +49,8 @@ anything outside ASCII.
 | `index.html` | The page. Hand-written outside the `<!-- NAME:START -->` markers. |
 | `assets/theme.css` | The whole design system, one stylesheet. |
 | `assets/site.js` | Copy-to-clipboard, the name that types itself, the mobile nav drawer and the current-section marker. The heading is the control that stops the loop: it takes focus, and Enter, Space or a click resolves the name and holds it. Without JS the copy button hides itself, the nav stays a scrolling strip, the marker never lights up, the heading is not focusable and the name is simply there. Reduced motion does the same, because the script never splits the name into characters. |
-| `assets/portrait.jpg` | The headshot, cropped square and converted to grayscale at source so a photo cannot fight the palette. Used in the 30px header square and as the Open Graph image. |
+| `assets/portrait.jpg` | The headshot, cropped square and converted to grayscale at source so a photo cannot fight the palette. Used as the Open Graph image. |
+| `assets/portrait-mark.jpg` | The same headshot cropped to the head, for the 40px header square. At that size a shoulder-up frame leaves a face too small to read. |
 | `assets/avatar.jpg` | The avatar illustration, cropped square at 760px and desaturated at source for the same reason as the headshot. This is the figure in the hero. |
 | `assets/shots/` | Product screenshots, committed rather than generated. Each is cropped to 16:10 at 1200px wide; the CSS reserves the box with `aspect-ratio` and the images carry no `width`/`height` attributes, so a new shot must be 16:10 or it will be cropped by `object-fit`. Their job is to show interface work. |
 | `data/profile.json` | The curated half: prose, roles, stack, projects, contact rows. |

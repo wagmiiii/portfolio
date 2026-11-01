@@ -186,12 +186,13 @@ img {
   flex: 0 0 auto;
 }
 
-/* The brand mark is the headshot itself. At 30px it holds its own against 16px type in a 56px bar
-   without pushing the wordmark. The source file is already grayscale. */
+/* The brand mark is the headshot, cropped to the head rather than the full frame: in a 56px bar the
+   face has to read at 40px, and a shoulder-up crop puts a 12px face inside a 40px box. The source
+   file is already grayscale. */
 .brand-photo {
   flex: 0 0 auto;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   object-fit: cover;
   border: 1px solid var(--line-strong);
 }
