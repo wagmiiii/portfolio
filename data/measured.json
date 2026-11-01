@@ -1,0 +1,731 @@
+{
+  "fetched_at": "2026-11-01",
+  "source": "https://api.github.com",
+  "account": "wagmiiii",
+  "owned_orgs": [
+    "StaffPurse",
+    "Tollcraft",
+    "accensa"
+  ],
+  "queries": {
+    "merged_prs": "search/issues?q=author:wagmiiii+type:pr+is:merged",
+    "prs_opened": "search/issues?q=author:wagmiiii+type:pr",
+    "issues_opened": "search/issues?q=author:wagmiiii+type:issue",
+    "commits_authored": "search/commits?q=author:wagmiiii",
+    "reviews": "search/issues?q=reviewed-by:wagmiiii+type:pr",
+    "repos": "users/wagmiiii/repos"
+  },
+  "profile": {
+    "name": "WAGMI",
+    "since": "2023",
+    "public_repos": 77
+  },
+  "commits_authored": 2856,
+  "prs_opened": 321,
+  "issues_opened": 1178,
+  "prs_reviewed": 60,
+  "merged_enumerated": 293,
+  "merged_reported_total": 296,
+  "repos_touched": 62,
+  "authored_repos": 19,
+  "workspaces": 58,
+  "owned_org_repos": 9,
+  "owned_org_merged_prs": 135,
+  "thirdparty_repos": 49,
+  "thirdparty_merged_prs": 107,
+  "thirdparty_owners": 41,
+  "languages": 8,
+  "language_counts": [
+    {
+      "language": "TypeScript",
+      "repos": 10
+    },
+    {
+      "language": "Go",
+      "repos": 6
+    },
+    {
+      "language": "Rust",
+      "repos": 3
+    },
+    {
+      "language": "JavaScript",
+      "repos": 2
+    },
+    {
+      "language": "Astro",
+      "repos": 1
+    },
+    {
+      "language": "Dart",
+      "repos": 1
+    },
+    {
+      "language": "Solidity",
+      "repos": 1
+    },
+    {
+      "language": "CSS",
+      "repos": 1
+    }
+  ],
+  "merged_by_repo": {
+    "ASTROIDX556/astroid-contract": 1,
+    "ASTROIDX556/astroid-web": 3,
+    "Agrisettle/HarvestLock-Contracts": 1,
+    "AudioBitsStellar/AudioBlocks_Frontend_v1": 2,
+    "BCPathway/bc-forge": 4,
+    "Betta-Pay/BettaPay-Contract": 3,
+    "Betta-Pay/BettaPay-Frontend": 1,
+    "CalloraOrg/Callora-Frontend": 1,
+    "CarbonScribe/carbon-scribe": 1,
+    "CemAyyildiz/Quittance": 4,
+    "Commitlabs-Org/Commitlabs-Frontend": 4,
+    "CredenceOrg/Credence-Frontend": 8,
+    "Fluxora-Org/Fluxora-Contracts": 2,
+    "Godgift-care/sci-healthcare-backend": 3,
+    "Invoice-Liquidity-Network/ILN-Smart-Contract": 1,
+    "Miracle656/wraith": 1,
+    "NFTopia-Foundation/nftopia-stellar": 1,
+    "Nexacore-Org/NexaFx-web": 2,
+    "PhasoraLabs/StellarGrantProtocol": 1,
+    "QuickLendX/quicklendx-protocol": 6,
+    "Remitwise-Org/Remitwise-Contracts": 5,
+    "Remitwise-Org/Remitwise-Frontend": 2,
+    "SPulse-Org/SPulse-Contract": 3,
+    "Savitura/Savitools": 1,
+    "Shelterflex/monorepo": 1,
+    "Smartdevs17/SubTrackr": 1,
+    "Soroban-Cost-Linter/soroban-cost-linter": 1,
+    "StaffPurse/staffpurse-app": 11,
+    "StaffPurse/staffpurse-contracts": 8,
+    "StaffPurse/staffpurse-web": 26,
+    "Stellar-Agent-Guard/stellar-agent-guard-dashboard": 1,
+    "Stellar-IndigoPay/Stellar-IndigoPay": 2,
+    "Stellar-VaultLink/invofi": 1,
+    "Stellar-VaultLink/invofi-contracts": 1,
+    "StellarCanary/ProtocolCanary-Action": 1,
+    "Stellopay/stellopay-backend": 2,
+    "StepFi-app/StepFi-API": 1,
+    "TevaLabs/Xelma-Backend": 4,
+    "Tollcraft/soroban-budget-assert": 10,
+    "Tollcraft/soroban-cost-linter": 11,
+    "Tollcraft/soroban-cost-profiler": 11,
+    "Traqora/astroml": 3,
+    "TrusTrove/TrusTrove-app": 2,
+    "TrusTrove/TrusTrove-contract": 3,
+    "accensa/accensa-app": 19,
+    "accensa/accensa-contracts": 17,
+    "accensa/x402-facilitator-stellar": 22,
+    "accesslayerorg/accesslayer-client": 2,
+    "accesslayerorg/accesslayer-server": 3,
+    "benelabs/crucible": 1,
+    "cocor-tech/moistello-backend": 1,
+    "conduit-protocol/streamFi-sdk": 1,
+    "karagozemin/OverSync": 3,
+    "sorolens/sorolens": 6,
+    "sorotrail/SoroBeacon": 1,
+    "sorotrail/SoroTrail": 1,
+    "wagmiiii/alpha-movies-site": 15,
+    "wagmiiii/boy-concept": 15,
+    "wagmiiii/pr-reviewer": 17,
+    "wagmiiii/recoding": 4,
+    "zkpayroll/zk-payroll-contracts": 2,
+    "zkpayroll/zk-payroll-sdk": 1
+  },
+  "latest_by_repo": {
+    "ASTROIDX556/astroid-contract": "2026-08-27",
+    "ASTROIDX556/astroid-web": "2026-10-20",
+    "Agrisettle/HarvestLock-Contracts": "2026-10-16",
+    "AudioBitsStellar/AudioBlocks_Frontend_v1": "2026-09-24",
+    "BCPathway/bc-forge": "2026-07-23",
+    "Betta-Pay/BettaPay-Contract": "2026-07-25",
+    "Betta-Pay/BettaPay-Frontend": "2026-09-25",
+    "CalloraOrg/Callora-Frontend": "2026-06-27",
+    "CarbonScribe/carbon-scribe": "2026-06-29",
+    "CemAyyildiz/Quittance": "2026-07-28",
+    "Commitlabs-Org/Commitlabs-Frontend": "2026-06-28",
+    "CredenceOrg/Credence-Frontend": "2026-07-24",
+    "Fluxora-Org/Fluxora-Contracts": "2026-07-26",
+    "Godgift-care/sci-healthcare-backend": "2026-10-19",
+    "Invoice-Liquidity-Network/ILN-Smart-Contract": "2026-08-25",
+    "Miracle656/wraith": "2026-06-28",
+    "NFTopia-Foundation/nftopia-stellar": "2026-06-29",
+    "Nexacore-Org/NexaFx-web": "2026-06-27",
+    "PhasoraLabs/StellarGrantProtocol": "2026-09-25",
+    "QuickLendX/quicklendx-protocol": "2026-07-25",
+    "Remitwise-Org/Remitwise-Contracts": "2026-07-23",
+    "Remitwise-Org/Remitwise-Frontend": "2026-06-26",
+    "SPulse-Org/SPulse-Contract": "2026-08-19",
+    "Savitura/Savitools": "2026-08-26",
+    "Shelterflex/monorepo": "2026-08-27",
+    "Smartdevs17/SubTrackr": "2026-06-24",
+    "Soroban-Cost-Linter/soroban-cost-linter": "2026-07-02",
+    "StaffPurse/staffpurse-app": "2026-09-15",
+    "StaffPurse/staffpurse-contracts": "2026-09-15",
+    "StaffPurse/staffpurse-web": "2026-09-15",
+    "Stellar-Agent-Guard/stellar-agent-guard-dashboard": "2026-09-30",
+    "Stellar-IndigoPay/Stellar-IndigoPay": "2026-07-17",
+    "Stellar-VaultLink/invofi": "2026-08-19",
+    "Stellar-VaultLink/invofi-contracts": "2026-08-19",
+    "StellarCanary/ProtocolCanary-Action": "2026-10-19",
+    "Stellopay/stellopay-backend": "2026-07-26",
+    "StepFi-app/StepFi-API": "2026-06-26",
+    "TevaLabs/Xelma-Backend": "2026-06-28",
+    "Tollcraft/soroban-budget-assert": "2026-10-26",
+    "Tollcraft/soroban-cost-linter": "2026-10-26",
+    "Tollcraft/soroban-cost-profiler": "2026-10-08",
+    "Traqora/astroml": "2026-09-24",
+    "TrusTrove/TrusTrove-app": "2026-09-23",
+    "TrusTrove/TrusTrove-contract": "2026-10-19",
+    "accensa/accensa-app": "2026-10-26",
+    "accensa/accensa-contracts": "2026-10-26",
+    "accensa/x402-facilitator-stellar": "2026-10-26",
+    "accesslayerorg/accesslayer-client": "2026-07-25",
+    "accesslayerorg/accesslayer-server": "2026-07-26",
+    "benelabs/crucible": "2026-06-26",
+    "cocor-tech/moistello-backend": "2026-08-26",
+    "conduit-protocol/streamFi-sdk": "2026-08-25",
+    "karagozemin/OverSync": "2026-06-28",
+    "sorolens/sorolens": "2026-10-18",
+    "sorotrail/SoroBeacon": "2026-09-25",
+    "sorotrail/SoroTrail": "2026-07-28",
+    "wagmiiii/alpha-movies-site": "2026-10-13",
+    "wagmiiii/boy-concept": "2026-10-28",
+    "wagmiiii/pr-reviewer": "2026-08-11",
+    "wagmiiii/recoding": "2026-03-27",
+    "zkpayroll/zk-payroll-contracts": "2026-06-28",
+    "zkpayroll/zk-payroll-sdk": "2026-06-28"
+  },
+  "thirdparty_rows": [
+    {
+      "repo": "CredenceOrg/Credence-Frontend",
+      "owner": "CredenceOrg",
+      "merged_prs": 8,
+      "latest": "2026-07-24",
+      "html": "https://github.com/CredenceOrg/Credence-Frontend"
+    },
+    {
+      "repo": "QuickLendX/quicklendx-protocol",
+      "owner": "QuickLendX",
+      "merged_prs": 6,
+      "latest": "2026-07-25",
+      "html": "https://github.com/QuickLendX/quicklendx-protocol"
+    },
+    {
+      "repo": "sorolens/sorolens",
+      "owner": "sorolens",
+      "merged_prs": 6,
+      "latest": "2026-10-18",
+      "html": "https://github.com/sorolens/sorolens"
+    },
+    {
+      "repo": "Remitwise-Org/Remitwise-Contracts",
+      "owner": "Remitwise-Org",
+      "merged_prs": 5,
+      "latest": "2026-07-23",
+      "html": "https://github.com/Remitwise-Org/Remitwise-Contracts"
+    },
+    {
+      "repo": "BCPathway/bc-forge",
+      "owner": "BCPathway",
+      "merged_prs": 4,
+      "latest": "2026-07-23",
+      "html": "https://github.com/BCPathway/bc-forge"
+    },
+    {
+      "repo": "CemAyyildiz/Quittance",
+      "owner": "CemAyyildiz",
+      "merged_prs": 4,
+      "latest": "2026-07-28",
+      "html": "https://github.com/CemAyyildiz/Quittance"
+    },
+    {
+      "repo": "Commitlabs-Org/Commitlabs-Frontend",
+      "owner": "Commitlabs-Org",
+      "merged_prs": 4,
+      "latest": "2026-06-28",
+      "html": "https://github.com/Commitlabs-Org/Commitlabs-Frontend"
+    },
+    {
+      "repo": "TevaLabs/Xelma-Backend",
+      "owner": "TevaLabs",
+      "merged_prs": 4,
+      "latest": "2026-06-28",
+      "html": "https://github.com/TevaLabs/Xelma-Backend"
+    },
+    {
+      "repo": "ASTROIDX556/astroid-web",
+      "owner": "ASTROIDX556",
+      "merged_prs": 3,
+      "latest": "2026-10-20",
+      "html": "https://github.com/ASTROIDX556/astroid-web"
+    },
+    {
+      "repo": "Betta-Pay/BettaPay-Contract",
+      "owner": "Betta-Pay",
+      "merged_prs": 3,
+      "latest": "2026-07-25",
+      "html": "https://github.com/Betta-Pay/BettaPay-Contract"
+    },
+    {
+      "repo": "Godgift-care/sci-healthcare-backend",
+      "owner": "Godgift-care",
+      "merged_prs": 3,
+      "latest": "2026-10-19",
+      "html": "https://github.com/Godgift-care/sci-healthcare-backend"
+    },
+    {
+      "repo": "SPulse-Org/SPulse-Contract",
+      "owner": "SPulse-Org",
+      "merged_prs": 3,
+      "latest": "2026-08-19",
+      "html": "https://github.com/SPulse-Org/SPulse-Contract"
+    },
+    {
+      "repo": "Traqora/astroml",
+      "owner": "Traqora",
+      "merged_prs": 3,
+      "latest": "2026-09-24",
+      "html": "https://github.com/Traqora/astroml"
+    },
+    {
+      "repo": "TrusTrove/TrusTrove-contract",
+      "owner": "TrusTrove",
+      "merged_prs": 3,
+      "latest": "2026-10-19",
+      "html": "https://github.com/TrusTrove/TrusTrove-contract"
+    },
+    {
+      "repo": "accesslayerorg/accesslayer-server",
+      "owner": "accesslayerorg",
+      "merged_prs": 3,
+      "latest": "2026-07-26",
+      "html": "https://github.com/accesslayerorg/accesslayer-server"
+    },
+    {
+      "repo": "karagozemin/OverSync",
+      "owner": "karagozemin",
+      "merged_prs": 3,
+      "latest": "2026-06-28",
+      "html": "https://github.com/karagozemin/OverSync"
+    },
+    {
+      "repo": "AudioBitsStellar/AudioBlocks_Frontend_v1",
+      "owner": "AudioBitsStellar",
+      "merged_prs": 2,
+      "latest": "2026-09-24",
+      "html": "https://github.com/AudioBitsStellar/AudioBlocks_Frontend_v1"
+    },
+    {
+      "repo": "Fluxora-Org/Fluxora-Contracts",
+      "owner": "Fluxora-Org",
+      "merged_prs": 2,
+      "latest": "2026-07-26",
+      "html": "https://github.com/Fluxora-Org/Fluxora-Contracts"
+    },
+    {
+      "repo": "Nexacore-Org/NexaFx-web",
+      "owner": "Nexacore-Org",
+      "merged_prs": 2,
+      "latest": "2026-06-27",
+      "html": "https://github.com/Nexacore-Org/NexaFx-web"
+    },
+    {
+      "repo": "Remitwise-Org/Remitwise-Frontend",
+      "owner": "Remitwise-Org",
+      "merged_prs": 2,
+      "latest": "2026-06-26",
+      "html": "https://github.com/Remitwise-Org/Remitwise-Frontend"
+    },
+    {
+      "repo": "Stellar-IndigoPay/Stellar-IndigoPay",
+      "owner": "Stellar-IndigoPay",
+      "merged_prs": 2,
+      "latest": "2026-07-17",
+      "html": "https://github.com/Stellar-IndigoPay/Stellar-IndigoPay"
+    },
+    {
+      "repo": "Stellopay/stellopay-backend",
+      "owner": "Stellopay",
+      "merged_prs": 2,
+      "latest": "2026-07-26",
+      "html": "https://github.com/Stellopay/stellopay-backend"
+    },
+    {
+      "repo": "TrusTrove/TrusTrove-app",
+      "owner": "TrusTrove",
+      "merged_prs": 2,
+      "latest": "2026-09-23",
+      "html": "https://github.com/TrusTrove/TrusTrove-app"
+    },
+    {
+      "repo": "accesslayerorg/accesslayer-client",
+      "owner": "accesslayerorg",
+      "merged_prs": 2,
+      "latest": "2026-07-25",
+      "html": "https://github.com/accesslayerorg/accesslayer-client"
+    },
+    {
+      "repo": "zkpayroll/zk-payroll-contracts",
+      "owner": "zkpayroll",
+      "merged_prs": 2,
+      "latest": "2026-06-28",
+      "html": "https://github.com/zkpayroll/zk-payroll-contracts"
+    },
+    {
+      "repo": "ASTROIDX556/astroid-contract",
+      "owner": "ASTROIDX556",
+      "merged_prs": 1,
+      "latest": "2026-08-27",
+      "html": "https://github.com/ASTROIDX556/astroid-contract"
+    },
+    {
+      "repo": "Agrisettle/HarvestLock-Contracts",
+      "owner": "Agrisettle",
+      "merged_prs": 1,
+      "latest": "2026-10-16",
+      "html": "https://github.com/Agrisettle/HarvestLock-Contracts"
+    },
+    {
+      "repo": "Betta-Pay/BettaPay-Frontend",
+      "owner": "Betta-Pay",
+      "merged_prs": 1,
+      "latest": "2026-09-25",
+      "html": "https://github.com/Betta-Pay/BettaPay-Frontend"
+    },
+    {
+      "repo": "CalloraOrg/Callora-Frontend",
+      "owner": "CalloraOrg",
+      "merged_prs": 1,
+      "latest": "2026-06-27",
+      "html": "https://github.com/CalloraOrg/Callora-Frontend"
+    },
+    {
+      "repo": "CarbonScribe/carbon-scribe",
+      "owner": "CarbonScribe",
+      "merged_prs": 1,
+      "latest": "2026-06-29",
+      "html": "https://github.com/CarbonScribe/carbon-scribe"
+    },
+    {
+      "repo": "Invoice-Liquidity-Network/ILN-Smart-Contract",
+      "owner": "Invoice-Liquidity-Network",
+      "merged_prs": 1,
+      "latest": "2026-08-25",
+      "html": "https://github.com/Invoice-Liquidity-Network/ILN-Smart-Contract"
+    },
+    {
+      "repo": "Miracle656/wraith",
+      "owner": "Miracle656",
+      "merged_prs": 1,
+      "latest": "2026-06-28",
+      "html": "https://github.com/Miracle656/wraith"
+    },
+    {
+      "repo": "NFTopia-Foundation/nftopia-stellar",
+      "owner": "NFTopia-Foundation",
+      "merged_prs": 1,
+      "latest": "2026-06-29",
+      "html": "https://github.com/NFTopia-Foundation/nftopia-stellar"
+    },
+    {
+      "repo": "PhasoraLabs/StellarGrantProtocol",
+      "owner": "PhasoraLabs",
+      "merged_prs": 1,
+      "latest": "2026-09-25",
+      "html": "https://github.com/PhasoraLabs/StellarGrantProtocol"
+    },
+    {
+      "repo": "Savitura/Savitools",
+      "owner": "Savitura",
+      "merged_prs": 1,
+      "latest": "2026-08-26",
+      "html": "https://github.com/Savitura/Savitools"
+    },
+    {
+      "repo": "Shelterflex/monorepo",
+      "owner": "Shelterflex",
+      "merged_prs": 1,
+      "latest": "2026-08-27",
+      "html": "https://github.com/Shelterflex/monorepo"
+    },
+    {
+      "repo": "Smartdevs17/SubTrackr",
+      "owner": "Smartdevs17",
+      "merged_prs": 1,
+      "latest": "2026-06-24",
+      "html": "https://github.com/Smartdevs17/SubTrackr"
+    },
+    {
+      "repo": "Soroban-Cost-Linter/soroban-cost-linter",
+      "owner": "Soroban-Cost-Linter",
+      "merged_prs": 1,
+      "latest": "2026-07-02",
+      "html": "https://github.com/Soroban-Cost-Linter/soroban-cost-linter"
+    },
+    {
+      "repo": "Stellar-Agent-Guard/stellar-agent-guard-dashboard",
+      "owner": "Stellar-Agent-Guard",
+      "merged_prs": 1,
+      "latest": "2026-09-30",
+      "html": "https://github.com/Stellar-Agent-Guard/stellar-agent-guard-dashboard"
+    },
+    {
+      "repo": "Stellar-VaultLink/invofi",
+      "owner": "Stellar-VaultLink",
+      "merged_prs": 1,
+      "latest": "2026-08-19",
+      "html": "https://github.com/Stellar-VaultLink/invofi"
+    },
+    {
+      "repo": "Stellar-VaultLink/invofi-contracts",
+      "owner": "Stellar-VaultLink",
+      "merged_prs": 1,
+      "latest": "2026-08-19",
+      "html": "https://github.com/Stellar-VaultLink/invofi-contracts"
+    },
+    {
+      "repo": "StellarCanary/ProtocolCanary-Action",
+      "owner": "StellarCanary",
+      "merged_prs": 1,
+      "latest": "2026-10-19",
+      "html": "https://github.com/StellarCanary/ProtocolCanary-Action"
+    },
+    {
+      "repo": "StepFi-app/StepFi-API",
+      "owner": "StepFi-app",
+      "merged_prs": 1,
+      "latest": "2026-06-26",
+      "html": "https://github.com/StepFi-app/StepFi-API"
+    },
+    {
+      "repo": "benelabs/crucible",
+      "owner": "benelabs",
+      "merged_prs": 1,
+      "latest": "2026-06-26",
+      "html": "https://github.com/benelabs/crucible"
+    },
+    {
+      "repo": "cocor-tech/moistello-backend",
+      "owner": "cocor-tech",
+      "merged_prs": 1,
+      "latest": "2026-08-26",
+      "html": "https://github.com/cocor-tech/moistello-backend"
+    },
+    {
+      "repo": "conduit-protocol/streamFi-sdk",
+      "owner": "conduit-protocol",
+      "merged_prs": 1,
+      "latest": "2026-08-25",
+      "html": "https://github.com/conduit-protocol/streamFi-sdk"
+    },
+    {
+      "repo": "sorotrail/SoroBeacon",
+      "owner": "sorotrail",
+      "merged_prs": 1,
+      "latest": "2026-09-25",
+      "html": "https://github.com/sorotrail/SoroBeacon"
+    },
+    {
+      "repo": "sorotrail/SoroTrail",
+      "owner": "sorotrail",
+      "merged_prs": 1,
+      "latest": "2026-07-28",
+      "html": "https://github.com/sorotrail/SoroTrail"
+    },
+    {
+      "repo": "zkpayroll/zk-payroll-sdk",
+      "owner": "zkpayroll",
+      "merged_prs": 1,
+      "latest": "2026-06-28",
+      "html": "https://github.com/zkpayroll/zk-payroll-sdk"
+    }
+  ],
+  "owned_org_rows": [
+    {
+      "org": "StaffPurse",
+      "repos": [
+        "StaffPurse/staffpurse-app",
+        "StaffPurse/staffpurse-contracts",
+        "StaffPurse/staffpurse-web"
+      ],
+      "merged_prs": 45,
+      "html": "https://github.com/StaffPurse"
+    },
+    {
+      "org": "Tollcraft",
+      "repos": [
+        "Tollcraft/soroban-budget-assert",
+        "Tollcraft/soroban-cost-linter",
+        "Tollcraft/soroban-cost-profiler"
+      ],
+      "merged_prs": 32,
+      "html": "https://github.com/Tollcraft"
+    },
+    {
+      "org": "accensa",
+      "repos": [
+        "accensa/accensa-app",
+        "accensa/accensa-contracts",
+        "accensa/x402-facilitator-stellar"
+      ],
+      "merged_prs": 58,
+      "html": "https://github.com/accensa"
+    }
+  ],
+  "authored_rows": [
+    {
+      "name": "airlock-isolation-probe",
+      "language": "",
+      "description": "External launch-isolation evidence for airlock-sec/airlock issue 20; benign scratch probe only",
+      "pushed": "2026-10-30",
+      "stars": 0,
+      "html": "https://github.com/wagmiiii/airlock-isolation-probe"
+    },
+    {
+      "name": "airlock-reporting-probe",
+      "language": "",
+      "description": "Disposable GitHub reporting and push-event measurement for airlock-sec/airlock issue 21",
+      "pushed": "2026-10-28",
+      "stars": 0,
+      "html": "https://github.com/wagmiiii/airlock-reporting-probe"
+    },
+    {
+      "name": "boy-concept",
+      "language": "Astro",
+      "description": "",
+      "pushed": "2026-10-28",
+      "stars": 0,
+      "html": "https://github.com/wagmiiii/boy-concept"
+    },
+    {
+      "name": "alpha-movies-site",
+      "language": "TypeScript",
+      "description": "",
+      "pushed": "2026-10-13",
+      "stars": 1,
+      "html": "https://github.com/wagmiiii/alpha-movies-site"
+    },
+    {
+      "name": "wagmiiii",
+      "language": "",
+      "description": "",
+      "pushed": "2026-10-13",
+      "stars": 0,
+      "html": "https://github.com/wagmiiii/wagmiiii"
+    },
+    {
+      "name": "js-journey",
+      "language": "",
+      "description": "",
+      "pushed": "2026-09-17",
+      "stars": 0,
+      "html": "https://github.com/wagmiiii/js-journey"
+    },
+    {
+      "name": "Threshold",
+      "language": "JavaScript",
+      "description": "a private eligibility attestation app built on Midnight. A user proves they satisfy a numeric or categorical rule (a threshold, a membership check, a compliance condition) to a verifying party, without revealing the underlying private value.",
+      "pushed": "2026-09-16",
+      "stars": 0,
+      "html": "https://github.com/wagmiiii/Threshold"
+    },
+    {
+      "name": "portfolio",
+      "language": "CSS",
+      "description": "",
+      "pushed": "2026-09-08",
+      "stars": 0,
+      "html": "https://github.com/wagmiiii/portfolio"
+    },
+    {
+      "name": "pr-reviewer",
+      "language": "TypeScript",
+      "description": "",
+      "pushed": "2026-08-13",
+      "stars": 1,
+      "html": "https://github.com/wagmiiii/pr-reviewer"
+    },
+    {
+      "name": "SmartTriage",
+      "language": "",
+      "description": "",
+      "pushed": "2026-07-17",
+      "stars": 0,
+      "html": "https://github.com/wagmiiii/SmartTriage"
+    },
+    {
+      "name": "fiveguesses",
+      "language": "",
+      "description": "",
+      "pushed": "2026-07-05",
+      "stars": 0,
+      "html": "https://github.com/wagmiiii/fiveguesses"
+    },
+    {
+      "name": "go-ai-router",
+      "language": "Go",
+      "description": "",
+      "pushed": "2026-06-09",
+      "stars": 0,
+      "html": "https://github.com/wagmiiii/go-ai-router"
+    },
+    {
+      "name": "nini-waitlist",
+      "language": "Go",
+      "description": "",
+      "pushed": "2026-05-25",
+      "stars": 0,
+      "html": "https://github.com/wagmiiii/nini-waitlist"
+    },
+    {
+      "name": "projects",
+      "language": "Go",
+      "description": "Practice Golang",
+      "pushed": "2026-05-21",
+      "stars": 0,
+      "html": "https://github.com/wagmiiii/projects"
+    },
+    {
+      "name": "recoding",
+      "language": "Go",
+      "description": "",
+      "pushed": "2026-03-27",
+      "stars": 0,
+      "html": "https://github.com/wagmiiii/recoding"
+    },
+    {
+      "name": "troubleshoot",
+      "language": "",
+      "description": "",
+      "pushed": "2026-03-25",
+      "stars": 0,
+      "html": "https://github.com/wagmiiii/troubleshoot"
+    },
+    {
+      "name": "Ademola-Ernest-Ajala",
+      "language": "JavaScript",
+      "description": "",
+      "pushed": "2024-10-10",
+      "stars": 0,
+      "html": "https://github.com/wagmiiii/Ademola-Ernest-Ajala"
+    },
+    {
+      "name": "Dart-Programming",
+      "language": "Dart",
+      "description": "",
+      "pushed": "2024-02-04",
+      "stars": 0,
+      "html": "https://github.com/wagmiiii/Dart-Programming"
+    },
+    {
+      "name": "Abercrombie04",
+      "language": "",
+      "description": "Config files for my GitHub profile.",
+      "pushed": "2024-02-02",
+      "stars": 0,
+      "html": "https://github.com/wagmiiii/Abercrombie04"
+    }
+  ]
+}
