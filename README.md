@@ -60,10 +60,9 @@ anything outside ASCII.
 Thirteen regions of the page are generated: `META`, `IDENTITY`, `TELEMETRY`, `BAND`, `WORK`,
 `OPENSOURCE`, `STATS`, `TIMELINE`, `STACK`, `CREDENTIALS`, `PROJECTS`, `CONTACT`, `FOOTMETA`.
 `META` is the `<head>` copy, and it exists because the title, description and Open Graph text quote
-the same counts as the body: hand-written, they were the first thing to go stale on a re-measure,
-and the page claims in the hero that nothing on it is typed in by hand. Prose in
-`profile.json` may reference a measured value as `{commits}`, `{merged}`, `{ext_prs}` and so on;
-`build.py` fails on a placeholder with no value.
+the same counts as the body: hand-written, they were the first thing to go stale on a re-measure.
+Prose in `profile.json` may reference a measured value as `{commits}`, `{merged}`, `{ext_prs}` and
+so on; `build.py` fails on a placeholder with no value.
 
 ## How the counts are framed
 
