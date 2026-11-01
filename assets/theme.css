@@ -590,18 +590,6 @@ img {
   vertical-align: 1px;
 }
 
-.side-note {
-  margin-top: 1.5rem;
-  font-size: 10.5px;
-  line-height: 1.7;
-  color: var(--muted);
-  letter-spacing: 0.04em;
-}
-
-.side-note b {
-  color: var(--ink);
-}
-
 /* Red band ---------------------------------------------------------------- */
 
 .band {
@@ -1415,7 +1403,6 @@ h2.sec-title {
   .tl-what span,
   .contact-cell .lv,
   .tel--long .tel-v,
-  .side-note,
   .foot p {
     font-size: 15px;
   }

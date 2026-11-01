@@ -37,8 +37,8 @@
   },
   "opensource": {
     "paras": [
-      "The forks on this account are working copies, not a collection. Each one is where a pull request got written, and what counts as a contribution here is merged work only: pull requests that closed into a default branch I do not control. {ext_prs} of them, in {ext_repos} repositories belonging to {ext_owners} different owners. The list itself stays on GitHub rather than being copied onto this page, because a list I maintain by hand is a list that goes stale.",
-      "Also on the account: the {workspaces} forks those pull requests were written in, the {authored_repos} repositories that were created rather than forked, and the {owned_prs} merged pull requests that went into the three organizations I own or co-own, which are covered as product work above rather than as community contributions. Every one of those counts is checkable at the links below."
+      "The forks on this account are working copies, not a collection. Each one is where a pull request got written, and what counts as a contribution here is merged work only: pull requests that closed into a default branch I do not control. {ext_prs} of them, in {ext_repos} repositories belonging to {ext_owners} different owners.",
+      "Also on the account: the {workspaces} forks those pull requests were written in, the {authored_repos} repositories that were created rather than forked, and the {owned_prs} merged pull requests that went into the three organizations I own or co-own, which are covered as product work above rather than as community contributions."
     ]
   },
   "telemetry": [
