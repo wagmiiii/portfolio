@@ -1,0 +1,1453 @@
+/* Portfolio theme, derived from the Airlock documentation stylesheet.
+   Static, one stylesheet, no third-party requests, no webfonts.
+   Tactical telemetry: dark substrate, phosphor ink, one red accent, hairline compartments.
+   No gradients, no border radius, no shadows. The only green on the site is the status LED. */
+
+:root {
+  color-scheme: dark;
+  --bg: #0a0a0a;
+  --panel: #111110;
+  --panel-2: #161615;
+  --ink: #eaeaea;
+  --muted: #9a9a96;
+  --line: #2b2b28;
+  --line-strong: #4a4a46;
+  --red: #ff2a2a;
+  --red-fill: #e61919;
+  --green: #4af626;
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --wrap: 1360px;
+  --pad: clamp(1.25rem, 3.2vw, 2.75rem);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  scroll-padding-top: 5rem;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scanlines are a hard-edged tile, not a color ramp: one black row in every four. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Crect width='4' height='1' fill='%23000' fill-opacity='0.18'/%3E%3C/svg%3E");
+}
+
+::selection {
+  background: var(--red-fill);
+  color: #fff;
+}
+
+/* The page scrollbar takes the accent rather than the browser default. The transparent border
+   thins the thumb without thinning the hit target. The nav keeps its own hidden scrollbar. */
+html {
+  scrollbar-color: var(--red-fill) var(--bg);
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--red-fill);
+  border: 3px solid var(--bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--red);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--bg);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+b,
+strong {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+code {
+  font-family: var(--mono);
+  font-size: 0.92em;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  padding: 0.05em 0.3em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+}
+
+/* Text a screen reader should have and the page should not show. */
+.vh {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--red-fill);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.skip:focus {
+  left: 0;
+}
+
+.wrap {
+  width: min(calc(100% - 2 * var(--pad)), var(--wrap));
+  margin-inline: auto;
+}
+
+/* Header ------------------------------------------------------------------ */
+
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+.bar-in {
+  display: flex;
+  align-items: stretch;
+  gap: 1.25rem;
+  width: min(calc(100% - 2 * var(--pad)), var(--wrap));
+  margin-inline: auto;
+  min-height: 56px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding-right: 1.25rem;
+  border-right: 1px solid var(--line);
+  flex: 0 0 auto;
+}
+
+/* The brand mark is the headshot itself. At 30px it holds its own against 16px type in a 56px bar
+   without pushing the wordmark. The source file is already grayscale. */
+.brand-photo {
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border: 1px solid var(--line-strong);
+}
+
+.brand-name {
+  font-family: var(--sans);
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+}
+
+.brand-sec {
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  border: 1px solid var(--line-strong);
+  padding: 0.12rem 0.28rem;
+}
+
+.nav {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  flex: 1 1 auto;
+}
+
+.nav::-webkit-scrollbar {
+  display: none;
+}
+
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 1rem;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 2px solid transparent;
+}
+
+.nav a:hover {
+  color: var(--ink);
+  background: var(--panel);
+}
+
+.nav a[aria-current="true"] {
+  color: var(--ink);
+  background: var(--panel);
+  border-left-color: var(--line);
+  border-right-color: var(--line);
+  border-bottom-color: var(--red);
+}
+
+.nav .nav-ext {
+  margin-left: auto;
+  color: var(--ink);
+}
+
+/* Below 980px the nav becomes a drawer and this button opens it. It starts hidden so a page whose
+   script never loads keeps the scrolling strip instead of showing a button that does nothing. */
+.menu-toggle {
+  display: none;
+  align-items: center;
+  gap: 0.55rem;
+  flex: 0 0 auto;
+  margin-left: auto;
+  padding: 0 0.15rem;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.menu-toggle:hover {
+  color: var(--ink);
+}
+
+.menu-bars {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 1px;
+  background: currentColor;
+  transition: background-color 0.12s linear;
+}
+
+.menu-bars::before,
+.menu-bars::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 1px;
+  background: currentColor;
+  transition: transform 0.12s linear;
+}
+
+.menu-bars::before {
+  top: -5px;
+}
+
+.menu-bars::after {
+  top: 5px;
+}
+
+.menu-toggle[aria-expanded="true"] .menu-bars {
+  background: transparent;
+}
+
+.menu-toggle[aria-expanded="true"] .menu-bars::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] .menu-bars::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.bar-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding-left: 1.25rem;
+  border-left: 1px solid var(--line);
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  background: var(--red);
+}
+
+/* Hero -------------------------------------------------------------------- */
+
+.hero {
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(280px, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border-inline: 1px solid var(--line);
+}
+
+.hero-main {
+  background: var(--bg);
+  padding: clamp(2.5rem, 6vw, 5.5rem) var(--pad) clamp(2rem, 4vw, 3.5rem);
+}
+
+.hero-side {
+  background: var(--panel);
+  padding: var(--pad);
+}
+
+.kicker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.9rem;
+  margin: 0 0 1.5rem;
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.kicker .live {
+  color: var(--red);
+}
+
+.mega {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin: 0;
+  font-family: var(--sans);
+  font-weight: 900;
+  font-size: clamp(3.4rem, 12.5vw, 11rem);
+  line-height: 0.8;
+  letter-spacing: -0.055em;
+  text-transform: uppercase;
+}
+
+.mega .accent {
+  color: var(--red);
+}
+
+/* Each word is one flex item, so a mid-word break would be a wrap of the item's own content. */
+.mega > span {
+  white-space: nowrap;
+}
+
+/* site.js splits the words into characters and types them. Untyped characters keep their width, so
+   the heading never reflows and nothing under it moves. They stay in the accessibility tree too,
+   which is why this is opacity and not visibility. */
+.mega--typing > span > .ch {
+  opacity: 0;
+}
+
+.mega--typing > span > .ch.on {
+  opacity: 1;
+}
+
+/* Stopping the loop leaves the caret solid. Frozen mid-blink it would just be invisible. */
+.mega--paused .cursor {
+  animation: none;
+}
+
+/* Out of the flow only while the script is typing: an in-flow caret would widen whichever word it
+   sits in, and the name is sized to fill the column. Without the script it stays where it always
+   was, after the finished name. */
+.mega--typing .cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cursor {
+  display: inline-block;
+  width: 0.42em;
+  height: 0.72em;
+  margin-left: 0.06em;
+  background: var(--red);
+  animation: blink 1.2s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.lede {
+  max-width: 58ch;
+  margin: clamp(1.5rem, 3vw, 2.5rem) 0 0;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 44px;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border-color: var(--ink);
+  background: var(--panel);
+}
+
+.btn--red {
+  background: var(--red-fill);
+  border-color: var(--red-fill);
+  color: #fff;
+}
+
+.btn--red:hover {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.btn--ghost {
+  color: var(--muted);
+}
+
+/* Portrait. Grayscale at source so the photo cannot fight the palette.
+   The margin reset matters: a figure carries 40px of browser-default inline margin. */
+.portrait {
+  position: relative;
+  margin: 0 0 1.5rem;
+  border: 1px solid var(--line-strong);
+  background: var(--panel-2);
+}
+
+.portrait img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  filter: contrast(1.04);
+}
+
+.portrait figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 0.6rem;
+  border-top: 1px solid var(--line);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.tel-stack {
+  display: grid;
+  border-top: 1px solid var(--line-strong);
+}
+
+.tel {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.35rem 0.9rem;
+  align-items: baseline;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.tel-k {
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.tel-v {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: right;
+}
+
+/* A telemetry row whose value is a chip cluster or a sentence rather than a number. */
+.tel--chips .chips {
+  justify-self: end;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.tel--long .tel-v {
+  font-size: 11.5px;
+  font-weight: 400;
+}
+
+.tel--status {
+  margin-top: 1.5rem;
+  border: 1px solid var(--line-strong);
+  padding: 0.9rem;
+}
+
+.tel--status .tel-v {
+  color: var(--ink);
+}
+
+.led {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 0.5rem;
+  background: var(--green);
+  vertical-align: 1px;
+}
+
+.side-note {
+  margin-top: 1.5rem;
+  font-size: 10.5px;
+  line-height: 1.7;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.side-note b {
+  color: var(--ink);
+}
+
+/* Red band ---------------------------------------------------------------- */
+
+.band {
+  background: var(--red-fill);
+  color: #fff;
+}
+
+.band-in {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+  padding-block: 0.9rem;
+}
+
+.band-k {
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.band-t {
+  margin: 0;
+  flex: 1 1 auto;
+  font-family: var(--sans);
+  font-weight: 900;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.band-a {
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  white-space: nowrap;
+}
+
+/* Sections ---------------------------------------------------------------- */
+
+.sec {
+  padding-block: clamp(2.75rem, 6vw, 5.5rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.sec-head {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 1rem 1.5rem;
+  align-items: baseline;
+  margin-bottom: clamp(1.75rem, 3vw, 2.75rem);
+}
+
+.num {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--red);
+  white-space: nowrap;
+}
+
+h2.sec-title {
+  margin: 0;
+  font-family: var(--sans);
+  font-weight: 900;
+  font-size: clamp(1.9rem, 4.6vw, 3.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.tag {
+  justify-self: end;
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: right;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.5rem, 4vw, 4rem);
+}
+
+.prose {
+  max-width: 68ch;
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.75;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+}
+
+.prose ul {
+  margin: 0 0 1rem;
+  padding-left: 1.1rem;
+}
+
+.prose li {
+  margin-bottom: 0.4rem;
+}
+
+.prose strong {
+  color: var(--ink);
+}
+
+.prose a,
+.text-link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--red);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+
+.prose a:hover,
+.text-link:hover {
+  color: var(--red);
+}
+
+.mt {
+  margin-top: 1.5rem;
+}
+
+.quote {
+  max-width: 32ch;
+  margin: 0 0 1.75rem;
+  padding: 0.2rem 0 0.2rem 1.25rem;
+  border-left: 2px solid var(--red);
+  font-family: var(--sans);
+  font-weight: 900;
+  font-size: clamp(1.5rem, 3.2vw, 2.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: clamp(2rem, 4vw, 3.5rem);
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.stat {
+  background: var(--bg);
+  padding: 1.1rem 1.2rem 1.3rem;
+}
+
+.stat b {
+  display: block;
+  font-family: var(--sans);
+  font-weight: 900;
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
+  color: var(--ink);
+}
+
+.stat span {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 9.5px;
+  line-height: 1.5;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Work entries ------------------------------------------------------------ */
+
+.work {
+  display: grid;
+  border-top: 1px solid var(--line);
+}
+
+.work-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.42fr);
+  gap: clamp(1.25rem, 3vw, 3rem);
+  padding-block: clamp(1.75rem, 3.5vw, 2.75rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.work-title {
+  margin: 0;
+  font-family: var(--sans);
+  font-weight: 900;
+  font-size: clamp(1.5rem, 3vw, 2.35rem);
+  line-height: 1;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+
+.work-role {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.8rem;
+  margin: 0 0 0.9rem;
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.work-body {
+  max-width: 66ch;
+  margin: 0.9rem 0 0;
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.work-body strong {
+  color: var(--ink);
+}
+
+/* Product screenshots. They stay in color because their whole job is to show interface work;
+   the hairline frame and the caption bar are what pull them back into the page's own grammar. */
+.shots {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 1.1rem;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.shot {
+  margin: 0;
+  background: var(--panel);
+  overflow: hidden;
+}
+
+/* The aspect ratio reserves the box before the image decodes, which is why these imgs carry no
+   width and height attributes. Every shot is cropped to 16:10 at build time. */
+.shot img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  height: auto;
+  object-fit: cover;
+}
+
+.shot figcaption {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.4rem 0.6rem;
+  border-top: 1px solid var(--line);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.shot figcaption span {
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-transform: none;
+  text-align: right;
+}
+
+.work-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.work-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.work-metrics div {
+  background: var(--bg);
+  padding: 0.7rem 0.8rem;
+}
+
+/* Three metrics in a two-column grid would leave a hole showing the grid's own rule colour. */
+.work-metrics div:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+.work-metrics b {
+  display: block;
+  font-family: var(--sans);
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.work-metrics span {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 9px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.work-links {
+  display: grid;
+  gap: 0.3rem;
+  font-size: 10.5px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.work-links a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--line-strong);
+  text-underline-offset: 0.25em;
+}
+
+.work-links a:hover {
+  text-decoration-color: var(--red);
+  color: var(--red);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.chip {
+  font-size: 9.5px;
+  letter-spacing: 0.08em;
+  padding: 0.18rem 0.35rem;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* Cards ------------------------------------------------------------------- */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.35rem;
+  background: var(--bg);
+}
+
+.card:hover {
+  background: var(--panel);
+}
+
+.card-k {
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.card h3 {
+  margin: 0;
+  font-family: var(--sans);
+  font-weight: 900;
+  font-size: clamp(1.15rem, 1.7vw, 1.5rem);
+  line-height: 1;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+}
+
+.card p {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.card .chips {
+  margin-top: auto;
+  padding-top: 0.4rem;
+}
+
+.card-link {
+  margin-top: 0.4rem;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.card-link:hover {
+  color: var(--red);
+}
+
+/* Timeline ---------------------------------------------------------------- */
+
+.tl {
+  display: grid;
+  border-top: 1px solid var(--line);
+}
+
+.tl-row {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr) auto;
+  gap: 0.5rem 1.5rem;
+  align-items: baseline;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.tl-when {
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.tl-what {
+  font-family: var(--sans);
+  font-weight: 900;
+  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.tl-what span {
+  display: block;
+  margin-top: 0.3rem;
+  font-family: var(--mono);
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--muted);
+}
+
+.tl-note {
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: right;
+}
+
+.tl-detail {
+  grid-column: 2;
+  max-width: 66ch;
+  margin: 0.5rem 0 0;
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* Contact ----------------------------------------------------------------- */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.contact-cell {
+  background: var(--bg);
+  padding: 1.1rem 1.2rem;
+}
+
+.contact-cell:hover {
+  background: var(--panel);
+}
+
+.contact-cell .lk {
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.contact-cell .lv {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 12.5px;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+.copy {
+  margin-top: 0.6rem;
+  padding: 0.3rem 0.55rem;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.copy:hover {
+  border-color: var(--ink);
+}
+
+.copy[data-state="ok"] {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.copy[data-state="fail"] {
+  color: var(--red);
+  border-color: var(--red);
+}
+
+/* The copy button is an enhancement: with scripting off there is nothing to click. */
+.no-js .js-only {
+  display: none;
+}
+
+/* Footer ------------------------------------------------------------------ */
+
+.foot {
+  padding-block: clamp(2rem, 4vw, 3.5rem) 2.5rem;
+}
+
+.foot-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* `.foot p` sets small body type, so the wordmark needs the extra specificity to escape it. */
+.foot .foot-brand {
+  margin: 0 0 0.6rem;
+  font-family: var(--sans);
+  font-weight: 900;
+  font-size: clamp(2.4rem, 7.6vw, 5.75rem);
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--ink);
+}
+
+.foot p {
+  font-size: 11.5px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.foot h2 {
+  margin: 0 0 0.75rem;
+  font-size: 9.5px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.foot nav {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.foot nav a {
+  font-size: 11.5px;
+  color: var(--ink);
+}
+
+.foot nav a:hover {
+  color: var(--red);
+}
+
+.foot-legal {
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+/* Responsive -------------------------------------------------------------- */
+
+@media (max-width: 980px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-side {
+    border-top: 1px solid var(--line);
+  }
+
+  .bar-meta {
+    display: none;
+  }
+
+  /* Seven nowrap links in a scrollbar-less strip cannot be discovered by touch, so the same nav
+     folds into a drawer under the bar. .bar is the positioned ancestor the panel hangs from. */
+  html:not(.no-js) .menu-toggle {
+    display: inline-flex;
+  }
+
+  html:not(.no-js) .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: calc(100vh - 57px);
+    background: var(--panel);
+    border-bottom: 1px solid var(--line);
+  }
+
+  html:not(.no-js) .bar[data-menu="open"] .nav {
+    display: flex;
+  }
+
+  html:not(.no-js) .nav a {
+    min-height: 48px;
+    padding: 0 var(--pad);
+    border-top: 1px solid var(--line);
+    border-right: 0;
+    border-bottom: 1px solid transparent;
+    border-left: 2px solid transparent;
+    font-size: 11px;
+  }
+
+  html:not(.no-js) .nav a:first-child {
+    border-top: 0;
+  }
+
+  /* The strip marks the current section with a bottom rule; a vertical list reads the same state
+     as a left bar, and it does not have to fight the row separators for pixels. */
+  html:not(.no-js) .nav a[aria-current="true"] {
+    border-left-color: var(--red);
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    background: var(--panel-2);
+    color: var(--ink);
+  }
+
+  html:not(.no-js) .nav .nav-ext {
+    margin-left: 0;
+  }
+
+  .work-item {
+    grid-template-columns: 1fr;
+  }
+
+  .foot-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .foot-legal {
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+}
+
+  /* Touch targets. 980px is where the drawer arrives, and a 768px tablet is a touch device even
+     though its type still fits, so hit sizes move at that tier rather than at the phone tier. */
+@media (max-width: 980px) {
+  /* Chips that are links get a thumb-sized box; chips that are labels keep their density. */
+  a.chip {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 0.2rem 0.55rem;
+  }
+
+  .chips {
+    gap: 0.5rem;
+  }
+
+  .work-links a,
+  .card-link,
+  .foot nav a,
+  .band-a,
+  a.lv {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .copy {
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 760px) {
+  .split,
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  /* Two 16:10 shots side by side are unreadable on a phone, and the point of them is legibility. */
+  .shots {
+    grid-template-columns: 1fr;
+  }
+
+  .sec-head {
+    grid-template-columns: auto 1fr;
+  }
+
+  .tag {
+    grid-column: 2;
+    justify-self: start;
+    text-align: left;
+  }
+
+  .brand {
+    border-right: 0;
+    padding-right: 0;
+  }
+
+  .brand-sec {
+    display: none;
+  }
+
+  .tl-row {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+
+  .tl-detail {
+    grid-column: 1;
+  }
+
+  .tl-note {
+    text-align: left;
+  }
+
+  .tel--chips,
+  .tel--long {
+    grid-template-columns: 1fr;
+  }
+
+  .tel--chips .chips {
+    justify-self: start;
+    margin-top: 0.4rem;
+  }
+
+  .tel--long .tel-v {
+    text-align: left;
+  }
+
+  .foot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* The one grid the 980px tier left multi-column: a 1.5rem date in a ~148px cell is a squeeze,
+     and at 320px it is an overflow. The full-width row is what the number was sized for. */
+  .work-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .work-metrics div:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+
+  /* Legibility. 10.5px is already the size this page uses for its nav and kicker, so the metadata
+     layer moves to the site's own small size rather than to an invented one. */
+  .tel-k,
+  .band-k,
+  .tag,
+  .stat span,
+  .work-role,
+  .work-metrics span,
+  .chip,
+  .card-k,
+  .tl-when,
+  .tl-note,
+  .copy,
+  .foot h2,
+  .foot-legal,
+  .portrait figcaption,
+  .shot figcaption,
+  .contact-cell .lk {
+    font-size: 10.5px;
+  }
+
+  .prose,
+  .work-body,
+  .card p,
+  .tl-detail,
+  .tl-what span,
+  .contact-cell .lv,
+  .tel--long .tel-v,
+  .side-note,
+  .foot p {
+    font-size: 15px;
+  }
+
+  /* Each hero action gets its own row: at phone widths two per row wrap their own labels onto a
+     second line, which reads as a defect rather than as a stack. */
+  .cta-row .btn {
+    flex: 1 1 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body::before,
+  .bar,
+  .band,
+  .copy {
+    display: none;
+  }
+
+  body,
+  .card,
+  .stat,
+  .work-item {
+    background: #fff;
+    color: #000;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}

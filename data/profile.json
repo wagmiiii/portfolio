@@ -1,0 +1,399 @@
+{
+  "identity": {
+    "name": "Ademola Ajala",
+    "mega": [
+      "ADEMOLA",
+      "AJALA"
+    ],
+    "role": "Full-stack engineer. Go, Rust, TypeScript, Soroban.",
+    "kicker": [
+      "[ FULL-STACK ]",
+      "GO / RUST / TYPESCRIPT / SOROBAN",
+      "NEXT.JS AND AI-NATIVE DELIVERY",
+      "OPEN TO REMOTE AND RELOCATION"
+    ],
+    "lede": "I build backend services and on-chain tooling, and I build the front ends that put them in front of people: a Next.js merchant dashboard, a TypeScript verification dashboard, a VitePress site for Rust tooling. {commits} commits authored and {merged} pull requests landed across {repos} repositories. {ext_prs} of those merges went into {ext} repositories that are not mine.",
+    "meta": {
+      "url": "https://wagmiiii.github.io/portfolio/",
+      "image": "assets/portrait.jpg",
+      "title": "Ademola Ajala / Full-stack engineer, Go Rust TypeScript Soroban",
+      "description": "Ademola Ajala builds backend services, on-chain tooling and the front ends on top of them. Measured record: {commits} commits authored, {merged} merged pull requests across {repos} repositories, {ext_prs} of them into repositories he does not own.",
+      "og_title": "Ademola Ajala / Full-stack engineer",
+      "og_description": "Backend services, on-chain tooling and the interfaces over both, with a measured open-source record: {merged} merged pull requests, {ext_prs} of them into repositories he does not own."
+    },
+    "location": "Lagos, Nigeria",
+    "availability": "Open to remote / relocation",
+    "email": "ademola2993k@gmail.com",
+    "github": "https://github.com/wagmiiii",
+    "linkedin": "https://www.linkedin.com/in/ademola-ernest-ajala",
+    "cv": "cv/Ademola_Ajala_CV.pdf",
+    "account_since": "2023"
+  },
+  "band": {
+    "kicker": "[ measured {date} ]",
+    "title": "{ext_prs} merged pull requests into repositories that are not mine",
+    "link_text": "See the record",
+    "href": "#open-source"
+  },
+  "opensource": {
+    "paras": [
+      "The forks on this account are working copies, not a collection. Each one is where a pull request got written, and what counts as a contribution here is merged work only: pull requests that closed into a default branch I do not control. {ext_prs} of them, in {ext_repos} repositories belonging to {ext_owners} different owners. The list itself stays on GitHub rather than being copied onto this page, because a list I maintain by hand is a list that goes stale.",
+      "Also on the account: the {workspaces} forks those pull requests were written in, the {authored_repos} repositories that were created rather than forked, and the {owned_prs} merged pull requests that went into the three organizations I own or co-own, which are covered as product work above rather than as community contributions. Every one of those counts is checkable at the links below."
+    ]
+  },
+  "telemetry": [
+    {
+      "k": "Commits authored",
+      "v": "{commits}"
+    },
+    {
+      "k": "Merged pull requests",
+      "v": "{merged}"
+    },
+    {
+      "k": "Repositories touched",
+      "v": "{repos}"
+    },
+    {
+      "k": "Not my repositories",
+      "v": "{ext_repos}"
+    },
+    {
+      "k": "Organizations",
+      "v": "{orgs}"
+    },
+    {
+      "k": "Repositories authored",
+      "v": "{authored_repos}"
+    },
+    {
+      "k": "Languages shipped in",
+      "v": "{languages}"
+    },
+    {
+      "k": "On GitHub since",
+      "v": "{account_since}"
+    }
+  ],
+  "work": [
+    {
+      "title": "Accensa",
+      "role": "Core developer and maintainer",
+      "when": "Stellar Wave program",
+      "org": "accensa",
+      "description": "The merchant back-office for x402 sellers on Stellar. I work across all three public repositories: the Next.js dashboard with its event indexer and SDK, the Soroban contracts that anchor payment receipts and hold the refund vault, and the facilitator that settles x402 payment requests. Receipt verification is public, so a buyer never has to trust the merchant's own database.",
+      "frontend": "The part a merchant actually touches is accensa-app: a Next.js and TypeScript dashboard, with the public receipt verifier at its /verify route reading anchored state off the chain rather than out of a database.",
+      "shots": [
+        {
+          "src": "assets/shots/accensa-hero.jpg",
+          "repo": "accensa/accensa-app",
+          "cap": "Landing",
+          "alt": "Accensa landing page: trustless payments for AI agents, with buttons to verify a receipt and open the dashboard."
+        },
+        {
+          "src": "assets/shots/accensa-sdk.jpg",
+          "repo": "accensa/accensa-app",
+          "cap": "SDK section",
+          "alt": "Accensa integration section showing a verifyReceipt call imported from the SDK and checked against an anchored root."
+        }
+      ],
+      "chips": [
+        "TypeScript",
+        "Next.js",
+        "Rust",
+        "Soroban",
+        "x402"
+      ],
+      "repos": [
+        "accensa/accensa-app",
+        "accensa/x402-facilitator-stellar",
+        "accensa/accensa-contracts"
+      ],
+      "links": [
+        {
+          "label": "Verify a receipt",
+          "href": "https://accensa-dashboard.vercel.app/verify"
+        },
+        {
+          "label": "accensa org",
+          "href": "https://github.com/accensa"
+        }
+      ]
+    },
+    {
+      "title": "StaffPurse",
+      "role": "Core developer",
+      "org": "StaffPurse",
+      "description": "Spend records anchored on Soroban, with a public verification dashboard so an employer can check a disbursement without trusting the payroll system that produced it. Merged work lands in three repositories: staffpurse-web, the public dashboard, plus staffpurse-app and staffpurse-contracts.",
+      "chips": [
+        "TypeScript",
+        "Soroban",
+        "Verification"
+      ],
+      "repos": [
+        "StaffPurse/staffpurse-web",
+        "StaffPurse/staffpurse-app",
+        "StaffPurse/staffpurse-contracts"
+      ],
+      "links": [
+        {
+          "label": "Live dashboard",
+          "href": "https://staffpurse.github.io/staffpurse-web"
+        },
+        {
+          "label": "StaffPurse org",
+          "href": "https://github.com/StaffPurse"
+        }
+      ]
+    },
+    {
+      "title": "Tollcraft",
+      "role": "Creator and maintainer",
+      "when": "Stellar Wave program",
+      "org": "Tollcraft",
+      "description": "Rust tooling for Soroban developers who find out about compute cost too late. soroban-cost-linter flags resource-expensive contract patterns at write time, soroban-budget-assert adds runtime budget assertions, and soroban-cost-profiler explains a failed budget by showing where the instructions actually went.",
+      "frontend": "Tollcraft/docs is the front end for the same three crates: a VitePress site in Vue with a custom theme, so the pipeline reads as one product rather than three command line tools.",
+      "shots": [
+        {
+          "src": "assets/shots/tollcraft-hero.jpg",
+          "repo": "Tollcraft/docs",
+          "cap": "Landing",
+          "alt": "Tollcraft site landing page: stop guessing your gas bill, a three-tier cost pipeline for Stellar smart contracts."
+        },
+        {
+          "src": "assets/shots/tollcraft-pipeline.jpg",
+          "repo": "Tollcraft/docs",
+          "cap": "Pipeline",
+          "alt": "Tollcraft pipeline section: three cards for Cost Linter, Budget Assert and Cost Profiler, each linking to its repository."
+        }
+      ],
+      "chips": [
+        "Rust",
+        "Soroban",
+        "Static analysis",
+        "CLI"
+      ],
+      "repos": [
+        "Tollcraft/soroban-cost-linter",
+        "Tollcraft/soroban-cost-profiler",
+        "Tollcraft/soroban-budget-assert"
+      ],
+      "links": [
+        {
+          "label": "Tollcraft org",
+          "href": "https://github.com/Tollcraft"
+        }
+      ]
+    },
+    {
+      "title": "Airlock",
+      "role": "Author",
+      "when": "2026",
+      "org": "wagmiiii",
+      "metrics": [
+        {
+          "value": "24",
+          "label": "rules"
+        },
+        {
+          "value": "0",
+          "label": "runtime dependencies"
+        }
+      ],
+      "description": "A supply-chain scanner for Stellar and Soroban repositories. Python 3.11, standard library only, shipped as a CLI and a composite GitHub Action. Its rules judge a change against the policy that existed before the change, and it fails closed on every file it did not read.",
+      "chips": [
+        "Python",
+        "GitHub Action",
+        "Security"
+      ],
+      "repos": [
+        "wagmiiii/airlock"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "href": "https://github.com/wagmiiii/airlock"
+        }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "when": "Oct 2025 to present",
+      "what": "AI Native Software Engineer",
+      "who": "Learn2Earn",
+      "note": "Full-time",
+      "detail": "Backend services in Go, with AI-assisted tooling carrying the boilerplate. File system and configuration work on Linux hosts, and pairing through technical sprints to debug Go applications and shorten the review loop."
+    },
+    {
+      "when": "Feb 2024 to Jun 2024",
+      "what": "Data and Insights Intern",
+      "who": "Chevron",
+      "note": "Internship",
+      "detail": "Recurring reporting in Excel, Power BI, Power Apps and Power Automate, and dataset reviews that found discrepancies upstream of the decisions made from them. This is where the habit of checking a number before publishing it came from."
+    }
+  ],
+  "education": [
+    {
+      "when": "Oct 2019 to Apr 2025",
+      "what": "B.Eng Computer Engineering",
+      "who": "University of Benin",
+      "note": "Graduated 2025"
+    }
+  ],
+  "awards": [
+    {
+      "when": "Sep 2023 to Sep 2026",
+      "what": "Science and Technology Scholarship Award",
+      "who": "MTN Foundation"
+    },
+    {
+      "when": "Aug 2025 to present",
+      "what": "Aspire Leaders Program, Cohort 4",
+      "who": "Harvard University",
+      "note": "Selected"
+    },
+    {
+      "when": "Jun 2025 to present",
+      "what": "Effective Leadership",
+      "who": "HP Foundation",
+      "note": ""
+    }
+  ],
+  "stack": [
+    {
+      "group": "Programming",
+      "items": [
+        "Go",
+        "Rust",
+        "TypeScript",
+        "Python",
+        "SQL"
+      ]
+    },
+    {
+      "group": "Backend and blockchain",
+      "items": [
+        "Soroban smart contracts",
+        "Stellar",
+        "x402",
+        "Next.js",
+        "Supabase",
+        "Linux"
+      ]
+    },
+    {
+      "group": "AI and tooling",
+      "items": [
+        "GitHub open-source maintenance",
+        "Copilot",
+        "Agentic workflows",
+        "Google AI Studio"
+      ]
+    },
+    {
+      "group": "Data and platforms",
+      "items": [
+        "Power BI",
+        "Tableau",
+        "Excel",
+        "Microsoft Power Platform"
+      ]
+    }
+  ],
+  "credentials": [
+    {
+      "title": "GitHub Certified: Agentic AI Developer",
+      "issuer": "Microsoft",
+      "earned": "Oct 2026",
+      "expires": "Oct 2027",
+      "href": "https://learn.microsoft.com/en-us/credentials/"
+    },
+    {
+      "title": "Microsoft Certified: AI Business Professional",
+      "issuer": "Microsoft",
+      "earned": "Oct 2026",
+      "expires": "",
+      "href": "https://learn.microsoft.com/en-us/credentials/"
+    }
+  ],
+  "extra_projects": [
+    {
+      "k": "Agents League Hackathon",
+      "title": "IntelliDesk",
+      "p": "A Power Platform helpdesk orchestrator wired to AI models through Google AI Studio, with Dataverse schemas and technical logic built with GitHub Copilot.",
+      "chips": [
+        "Power Platform",
+        "Dataverse",
+        "Google AI Studio"
+      ],
+      "href": ""
+    },
+    {
+      "k": "Go and Supabase",
+      "title": "FiveGuesses",
+      "p": "A full-stack higher-or-lower game: Go backend, a leaderboard that moved from JSON files to Supabase and SQL, and a Google Stitch frontend deployed on Render.",
+      "chips": [
+        "Go",
+        "Supabase",
+        "Render"
+      ],
+      "href": "https://github.com/wagmiiii/fiveguesses"
+    },
+    {
+      "k": "Go and Supabase",
+      "title": "Community Waitlist Backend",
+      "p": "An interactive email waitlist and Wall of Faith submission system for the Merch By Nini Galilee collection, taken from zero to one.",
+      "chips": [
+        "Go",
+        "Supabase",
+        "Email"
+      ],
+      "href": "https://github.com/wagmiiii/nini-waitlist"
+    },
+    {
+      "k": "Privacy",
+      "title": "Threshold",
+      "p": "A private eligibility attestation app on Midnight: a user proves they satisfy a numeric or categorical requirement without revealing the underlying value.",
+      "chips": [
+        "JavaScript",
+        "Attestation"
+      ],
+      "href": "https://github.com/wagmiiii/Threshold"
+    }
+  ],
+  "contact": {
+    "cells": [
+      {
+        "lk": "Email",
+        "lv": "ademola2993k@gmail.com",
+        "copy": "email"
+      },
+      {
+        "lk": "GitHub",
+        "lv": "wagmiiii",
+        "href": "https://github.com/wagmiiii"
+      },
+      {
+        "lk": "LinkedIn",
+        "lv": "ademola-ernest-ajala",
+        "href": "https://www.linkedin.com/in/ademola-ernest-ajala"
+      },
+      {
+        "lk": "Curriculum vitae",
+        "lv": "PDF, 2 pages",
+        "href": "cv/Ademola_Ajala_CV.pdf"
+      },
+      {
+        "lk": "Based in",
+        "lv": "Lagos, Nigeria (UTC+1)",
+        "href": ""
+      },
+      {
+        "lk": "Status",
+        "lv": "Open to remote and relocation",
+        "href": ""
+      }
+    ]
+  }
+}
