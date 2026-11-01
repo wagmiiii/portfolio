@@ -358,6 +358,7 @@ img {
 .hero-main {
   background: var(--bg);
   padding: clamp(2.5rem, 6vw, 5.5rem) var(--pad) clamp(2rem, 4vw, 3.5rem);
+  container-type: inline-size;
 }
 
 .hero-side {
@@ -389,7 +390,12 @@ img {
   margin: 0;
   font-family: var(--sans);
   font-weight: 900;
+  /* The name has to fit the hero column, not the window: past 1360px the column stops growing while a
+     vw size does not, and the longer word ran on through the divider into the picture panel. Sized off
+     the container it is the same proportion of its own column at every width. The fraction leaves about
+     a twelfth of the column spare, which is what a wider fallback font than Helvetica eats into. */
   font-size: clamp(3.4rem, 12.5vw, 11rem);
+  font-size: clamp(2.5rem, 19cqw, 11rem);
   line-height: 0.8;
   letter-spacing: -0.055em;
   text-transform: uppercase;
